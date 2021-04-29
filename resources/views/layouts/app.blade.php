@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>MyStore</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="{{ asset('assets/js/init-alpine.js') }}"></script>
@@ -18,21 +18,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
         integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
     @yield('header')
+    <script src="{{asset('js/app.js')}}"></script>
+    @livewireStyles
 </head>
 
 <body>
     <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
-        @include('template.include._sidebar')
+        @include('layouts.include._sidebar')
         <div class="flex flex-col flex-1 w-full">
-            @include('template.include._navbar')
+            @include('layouts.include._navbar')
             <main class="h-full overflow-y-auto">
                 <div class="container px-6 mx-auto grid">
-                    @yield('content')
+                    {{ $slot }}
                 </div>
             </main>
         </div>
     </div>
     @yield('footer')
+    @livewireScripts
+    <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false" data-turbo-eval="false"></script>
 </body>
 
 </html>

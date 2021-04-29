@@ -1,5 +1,4 @@
-@extends('template.main')
-@section('content')
+<div>
     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
         Dashboard
     </h2>
@@ -394,7 +393,8 @@
                 <nav aria-label="Table navigation">
                     <ul class="inline-flex items-center">
                         <li>
-                            <button class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
+                            <button
+                                class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
                                 aria-label="Previous">
                                 <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                                     <path
@@ -438,7 +438,8 @@
                             </button>
                         </li>
                         <li>
-                            <button class="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-purple"
+                            <button
+                                class="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-purple"
                                 aria-label="Next">
                                 <svg class="w-4 h-4 fill-current" aria-hidden="true" viewBox="0 0 20 20">
                                     <path
@@ -497,4 +498,4 @@
             </div>
         </div>
     </div>
-@endsection
+</div>
