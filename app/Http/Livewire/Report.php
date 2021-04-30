@@ -8,6 +8,8 @@ class Report extends Component
 {
     public function render()
     {
-        return view('livewire.report');
+        return view('livewire.report.index')
+            ->extends('layouts.app')
+            ->section('contents');
     }
 }
